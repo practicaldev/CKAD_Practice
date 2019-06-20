@@ -10,5 +10,10 @@ spec:
   containers:
   - image: busybox
     name: busybox
-    command: ['sh','-c','echo "Hello, Kubernetes Namespace" && sleep 3600']
-
+    command: ['sh','-c','echo $MESSAGE && sleep 3600']
+    env:
+    - name: MESSAGE
+      valueFrom:
+        configMapKeyRef:
+          name: busybox-configmap
+          key: message
