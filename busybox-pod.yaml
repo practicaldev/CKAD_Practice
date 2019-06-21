@@ -7,7 +7,7 @@ metadata:
     app: busybox
     uses: command
 spec:
-  serviceAccountName: busybox-serviceaccount
+  serviceAccountName: busybox-serviceaccount # kubectl create serviceaccount busybox-serviceaccount
   containers:
   - image: busybox
     name: busybox
