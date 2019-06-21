@@ -4,5 +4,5 @@ metadata:
   namespace: os
   name: busybox-configmap
 data:
-  message: Hello, Kubernetes ConfigMap.
+  message: Hello, Kubernetes (from ConfigMap)
 
