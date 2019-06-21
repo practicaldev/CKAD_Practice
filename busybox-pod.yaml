@@ -7,10 +7,11 @@ metadata:
     app: busybox
     uses: command
 spec:
+  serviceAccountName: busybox-serviceaccount
   containers:
   - image: busybox
     name: busybox
-    command: ['sh','-c','echo $MESSAGE && sleep 3600']
+    command: ['sh','-c','echo "${MESSAGE}. Uses ServiceAccount." && sleep 3600']
     env:
     - name: MESSAGE
       valueFrom:
